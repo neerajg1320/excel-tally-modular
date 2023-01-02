@@ -19,6 +19,8 @@ const loadMainWindow = () => {
   mainWindow.loadURL(url).catch((error) => {
     if (error.code === 'ERR_ABORTED') return;
     console.error(`Error loading URL:${url} ${error}`);
+
+    mainWindow.loadURL(`file://${path.join(__dirname, './error.html')}`);
   });;
 
 }

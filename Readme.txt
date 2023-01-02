@@ -9,7 +9,7 @@ Step2:
     cd excel-table-min npm install
   iii) Create script react:start in package.json
     "scripts": {
-        "react:start": "cd excel-table-min && npm start",
+        "react:app": "cd excel-table-min && npm start",
         ...
       },
 
@@ -18,7 +18,7 @@ Step2:
 Step3:
   i) Add script for starting the electron app
   "scripts": {
-    "electron:start": "cd electron-main && npm start",
+    "electron:app": "cd electron-main && npm start",
     ...
   },
 
@@ -32,13 +32,13 @@ Step4:
   npm install concurrently cross-env wait-on
   ii) Create the scripts
   "scripts": {
-    "react:start": "cd excel-table-min && npm start",
-    "electron:start": "cd electron-main && npm start",
+    "react:app": "cd excel-table-min && npm start",
+    "electron:app": "cd electron-main && npm start",
 
-    "app:react": "cd excel-table-min && cross-env BROWSER=none npm start",
+    "app:client": "cd excel-table-min && cross-env BROWSER=none npm start",
     "app:server": "wait-on tcp:3000 && npm run electron:start",
-    "app": "concurrently -k \"npm run app:react\" \"npm run app:server\"",
+    "app": "concurrently -k \"npm run app:client\" \"npm run app:server\"",
 
-    ...
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
 
