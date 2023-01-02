@@ -1,0 +1,3 @@
+[submodule "excel-table-min"]
+	path = excel-table-min
+	url = git@github.com:neeraj76/excel-table-min.git
