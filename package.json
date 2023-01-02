@@ -1,0 +1,29 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Step1:     Create the electron-main.     Check electron-main/Readme.txt for procedure",
+  "main": "index.js",
+  "scripts": {
+    "react:start": "cd excel-table-min && npm start",
+    "electron:start": "cd electron-main && npm start",
+    "app:react": "cd excel-table-min && cross-env BROWSER=none npm start",
+    "app:server": "wait-on tcp:3000 && npm run electron:start",
+    "app": "concurrently -k \"npm run app:react\" \"npm run app:server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neeraj76/electron-wrapper-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neeraj76/electron-wrapper-app/issues"
+  },
+  "homepage": "https://github.com/neeraj76/electron-wrapper-app#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "wait-on": "^7.0.1"
+  }
+}
