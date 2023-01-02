@@ -7,9 +7,9 @@
     "react:app": "cd excel-table-min && npm start",
     "electron:app": "cd electron-main && npm start",
 
-    "app:client": "cd excel-table-min && cross-env BROWSER=none npm start",
-    "app:server": "wait-on tcp:3000 && npm run electron:start",
-    "app": "concurrently -k \"npm run app:client\" \"npm run app:server\"",
+    "app:client:nobrowser": "cross-env BROWSER=none npm run react:app",
+    "app:server": "wait-on tcp:3000 && npm run electron:app",
+    "app": "concurrently -k \"npm run app:client:nobrowser\" \"npm run app:server\"",
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
