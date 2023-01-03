@@ -1,3 +1,6 @@
 [submodule "excel-table-min"]
 	path = excel-table-min
 	url = git@github.com:neeraj76/excel-table-min.git
+[submodule "excel-tally-electron"]
+	path = excel-tally-electron
+	url = git@github.com:neeraj76/excel-tally-electron.git

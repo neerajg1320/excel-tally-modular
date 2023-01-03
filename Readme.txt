@@ -42,3 +42,10 @@ Step4:
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 
+
+Step5:
+  i) Set the contextIsolation flag to false so that ipcRenderer is available in browser process
+
+Step6:
+  i) Add the excel-tally-electron once we verify
+  git submodule add git@github.com:neeraj76/excel-tally-electron.git

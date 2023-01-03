@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "react:app": "cd excel-table-min && npm start",
-    "electron:app": "cd electron-main && npm start",
+    "electron:stub:app": "cd electron-main && npm start",
+    "electron:tally:app": "cd excel-tally-electron && npm start",
 
     "app:client:nobrowser": "cross-env BROWSER=none npm run react:app",
-    "app:server": "wait-on tcp:3000 && npm run electron:app",
-    "app": "concurrently -k \"npm run app:client:nobrowser\" \"npm run app:server\"",
+    "app:stub:server": "wait-on tcp:3000 && npm run electron:stub:app",
+    "app:tally:server": "wait-on tcp:3000 && npm run electron:tally:app",
+
+    "app:stub": "concurrently -k \"npm run app:client:nobrowser\" \"npm run app:stub:server\"",
+    "app": "concurrently -k \"npm run app:client:nobrowser\" \"npm run app:tally:server\"",
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
