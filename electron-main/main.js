@@ -15,7 +15,7 @@ const loadMainWindow = () => {
   // mainWindow.loadFile(path.join(__dirname, "index.html"));
   const url  = isDev
       ? 'http://localhost:3000'
-      : `file://${path.join(__dirname, '../index.html')}`;
+      : `file://${path.join(__dirname, '../excel-table-min/build/index.html')}`;
 
   mainWindow.loadURL(url).catch((error) => {
     if (error.code === 'ERR_ABORTED') return;

@@ -49,3 +49,27 @@ Step5:
 Step6:
   i) Add the excel-tally-electron once we verify
   git submodule add git@github.com:neeraj76/excel-tally-electron.git
+
+Step7:
+  Build Image:
+  Limitation:
+    We have to put the electron build related dependencies in a a react project
+
+  i) Create a link in for excel-tally-elecrtron in excel-table-min/public as electron
+     cd excel-table-min/public
+     ln -s ../../excel-tally-electron electron
+  ii) Make sure that yarn build puts the electron folder in the build folder
+     yarn build
+
+  Success
+
+Step8:
+  Notarization:
+  Limitation:
+    We have to put the notarization related targets in react project.
+    Added the "build" property in the package.json
+    Ensure:
+    "afterSign" property is there in the "build" for macOS notarization
+    "publish" for uploading to git
+    "mac" for making a universal image
+
