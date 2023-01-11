@@ -73,3 +73,7 @@ Step8:
     "publish" for uploading to git
     "mac" for making a universal image
 
+Step9:
+  Build image on Windows
+  i) Create symbolic link in excel-table-min/public
+  mklink /D electron ..\..\excel-tally-electron
