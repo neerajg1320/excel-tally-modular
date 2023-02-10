@@ -19,6 +19,7 @@
     "app": "concurrently -k \"npm run app:client:nobrowser\" \"npm run app:server\"",
 
     "start": "npm run app",
+    "build": "npm run react:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
