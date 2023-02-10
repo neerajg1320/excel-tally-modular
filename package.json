@@ -6,7 +6,7 @@
   "scripts": {
     "react:app": "cd excel-table-min && npm start",
     "electron:stub:app": "cd electron-main && npm start",
-    "electron:app": "cd excel-tally-electron && npm start",
+    "electron:app": "cd electron-excel-tally && npm start",
 
     "react:build": "cd excel-table-min && npm run build",
     "react:static": "cd excel-table-min && npm run static",
