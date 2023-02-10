@@ -1,6 +1,6 @@
-[submodule "excel-table-min"]
-	path = excel-table-min
-	url = git@github.com:neeraj76/excel-table-min.git
 [submodule "electron-excel-tally"]
 	path = electron-excel-tally
-	url = git@github.com:neeraj76/electron-excel-tally.git
+	url = ssh://git@github.com/neeraj76/electron-excel-tally
+[submodule "react-excel-tally"]
+	path = react-excel-tally
+	url = ssh://git@github.com/neeraj76/react-excel-tally
