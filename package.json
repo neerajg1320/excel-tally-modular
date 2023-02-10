@@ -4,12 +4,12 @@
   "description": "Step1:     Create the electron-main.     Check electron-main/Readme.txt for procedure",
   "main": "index.js",
   "scripts": {
-    "react:app": "cd excel-table-min && npm start",
+    "react:app": "cd react-excel-tally && npm start",
     "electron:stub:app": "cd electron-main && npm start",
     "electron:app": "cd electron-excel-tally && npm start",
 
-    "react:build": "cd excel-table-min && npm run build",
-    "react:static": "cd excel-table-min && npm run static",
+    "react:build": "cd react-excel-tally && npm run build",
+    "react:static": "cd react-excel-tally && npm run static",
 
     "app:client:nobrowser": "cross-env BROWSER=none npm run react:app",
     "app:stub:server": "wait-on tcp:3000 && npm run electron:stub:app",
